@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(0, 0%, 86%);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overall-card {
+    width: 850px;
+    min-height: 650px;
+    padding: 56px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 25px 25px 200px 25px;
+}
+
+/* input-section */
+
+.input-section {
+    display: grid;
+    grid-template-columns: repeat(3, 180px) 1fr;
+}
+
+.labels {
+    text-transform: uppercase;
+    color: hsl(0, 1%, 44%);
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.form-control {
+    width:160px;
+    height:70px;
+    padding-left:25px;
+    margin: 8px 0;
+    font-size: 32px;
+}
+
+.form-control::placeholder {
+    color: hsl(0, 1%, 44%);
+}
+
+.error-msg {
+    display: none;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 14px;
+    color: hsl(0, 100%, 67%);
+}
+
+.show-error-msg {
+    display: block;
+}
+
+.input-error .labels{
+    color: hsl(0, 100%, 67%); 
+}
+
+.label-red {
+    color: hsl(0, 100%, 67%);
+}
+
+.border-red {
+    border: 1px solid hsl(0, 100%, 67%) !important;
+    outline: none !important;
+}
+
+/* divider-section */
+
+.arrowbtn {
+    background-color: hsl(259, 100%, 65%);
+    cursor: pointer;
+}
+
+.arrowbtn:hover {
+    background-color: hsl(259, 69%, 69%);
+}
+
+.arrowbtn:active {
+    background-color: hsl(0, 0%, 8%);
+}
+
+/* output-section */
+
+.output-section {
+    font-size: 100px;
+    font-weight: 800;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+.output {
+    line-height: 100px;
+}
+
+#year-output,
+#month-output,
+#day-output {
+    color: hsl(259, 100%, 65%);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin: 20px 0;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 1024px) {
+    .overall-card {
+        width: 90%;
+        min-height: auto;
+        padding: 45px 25px;
+        border-radius: 25px 25px 100px 25px;
+    }
+
+    .input-section {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .labels {
+        letter-spacing: 2px;
+        font-size: 12px;
+    }
+
+    .form-control {
+        width:100%;
+        height:55px;
+        padding-left:15px;
+        margin: 5px 0;
+        font-size: 22px;
+    }
+
+    .error-message {
+        font-size: 11px;
+    }
+
+    .divider-section {
+        position: relative;
+        margin: 40px 0;
+    }
+
+    .arrowbtn {
+        position: absolute;
+        top: -40%;
+        left: 40%;
+        width: 50px;
+        height: 50px;
+        padding: 15px;
+    }
+
+    .output-section {
+        font-size: 50px;
+        font-weight: 800;
+        font-style: italic;
+        margin-top: 8px;
+    }
+
+    .output {
+        line-height: 50px;
+    }
+}
